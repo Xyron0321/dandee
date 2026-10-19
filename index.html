@@ -12,12 +12,12 @@
 <main class="wrap"><div class="small">Made with love, just for you</div><div class="icon" id="icon">💌</div><section class="paper" id="paper"><h1 id="title"></h1><p id="message"></p><button id="next"></button></section><div class="dots" id="dots"></div></main>
 <script>
 const pages=[
-['💌','Hi, baby Dandee ♡','I made this little something for you. Nothing fancy, I just wanted to make you smile today.','Open your surprise ♡'],
+['💌','Hi, my baby ♡','I made this little something for you. Nothing fancy, I just wanted to make you smile today.','Open your surprise ♡'],
 ['🌷','First of all...',"I know there are moments when your mind gets a little too loud. And I know I can't always make every worry disappear. But I want you to know that you don't have to figure everything out alone.",'There’s more →'],
 ['🤍','Just a reminder, baby',"I'm happy with what we have. I love getting to know you more, choosing you, and being part of your days. I'm not here just for the easy and happy moments.",'One more thing ♡'],
 ['🫶','Even from far away...',"I may not always be there to hold your hand, but I hope you never have to question how much you mean to me. I'm here because I want to be here, baby. With you.",'A little promise →'],
 ['💗','My promise to you',"We'll have our worries and misunderstandings sometimes, and that's okay. I want us to keep talking, understanding each other, and choosing to work through things together. You matter to me, sobra.",'Last one, promise ♡'],
-['💞','I love you, baby.',"I hope this made you smile kahit konti. I'm really grateful that I have you in my life. And if you ever forget how special you are to me, you can always come back here. Love, Xyron ♡",'Read it again ↺']
+['💞','I love you, baby.',"I hope this made you smile kahit konti. I'm really grateful that I have you in my life. And if you ever forget how special you are to me, you can always come back here. Love, Xyy ♡",'Read it again ↺']
 ];
 let step=0;function show(){const p=pages[step];document.getElementById('icon').textContent=p[0];document.getElementById('title').textContent=p[1];document.getElementById('message').textContent=p[2];document.getElementById('next').textContent=p[3];document.getElementById('paper').style.animation='none';void document.getElementById('paper').offsetWidth;document.getElementById('paper').style.animation='appear .45s ease';document.getElementById('dots').innerHTML=pages.map((_,i)=>'<span class="dot '+(i===step?'active':'')+'"></span>').join('')};document.getElementById('next').addEventListener('click',()=>{step=(step+1)%pages.length;show()});show();
 </script>
